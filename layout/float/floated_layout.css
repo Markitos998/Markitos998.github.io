@@ -1,0 +1,137 @@
+/*
+FOUNDATION
+*/
+
+:root{
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after{
+    box-sizing: inherit;
+}
+
+body * + * {
+    margin-top: 1.5em;
+}
+
+/*
+GENERIC RULES
+*/
+
+body{
+    background: linear-gradient(210deg,black,blue,purple);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer{
+    background-color: teal;
+    padding: .5em 1.5em;
+    color: white;
+
+}
+
+footer{
+    font-size: larger;
+}
+
+main{
+    /*SISTEMA DECIMALE__IL NUMERO 1000 È COMPOSTO DA 4 DIGIT
+    (PUO ASSUMERE UN VALORE CHE VA DA 0 A 9)
+    (Ogni posizione ha 10 possibilità)*/
+    background-color: #fff;
+    /*COLORE=insieme di 6 digit*/
+    /*TEORIA DEI COLORI*/
+    /*SISTEMA ESADECIMALE(0,1,2,3,4,5,6,7,8,9,A,B,C,D,F)
+    permette di rappresentare tutti i colori*/
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+header,
+main,
+footer{
+    border-radius: .5em;
+}
+
+article, h3{
+margin: 0.1;
+}
+
+/*
+LAYOUT
+*/
+
+.container{
+    /*Il container deve avere 
+    una larghezza max definita*/
+
+    max-width: 1080px; /*si espande fino a 1080px,
+    se la schermata è più piccola rimane impostata con la larghezza di default 
+    che è il 100% della pagina*/
+    margin: 0 auto; /*centraggio*/
+}
+
+article{
+    float: left;
+    width: 50%;
+    background-color: bisque;
+}
+/*CLEARFIX*/
+section::after{
+    display: block;
+    content: ""; /*L'elemento HTML che viene 
+    visualizzato dentro l'elemento, dunque se vi scrivo dentro
+    viene messa a display
+     alla fine della section, come ultimo figlio(::after)*/
+    clear: both;
+}
+/*
+ARTICLE
+*/
+article{
+    float: left;
+    width: 50%;
+    background-color: bisque;
+    padding: 1.5em;
+    border-radius: 3%;
+}
+
+section div article:first-child{
+    margin-top: 1.5em;
+}
+
+section div article:nth-child(2n+1){
+margin-right: 1.5em;
+}
+
+section div article{
+width: calc(50% - (1.5em /2));
+}
+/*SECTION MARGINO COLLAPSING PROBLEM*/
+section > h2{
+    margin-top: 1.5em;
+   
+}
+
+section::before{
+    display: table;/*display table agisce dentro l'elemento*/
+    content: "";
+    
+
+}
+
+/*iNTERNAL ARTICLE*/
+
+section div article img{
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+}
+ /*BLOCK FORMATTING CONTENT (BFC)*/
+
+ section div article p{
+    overflow: auto;
+    text-align: justify;
+ }

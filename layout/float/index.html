@@ -3,116 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Layout</title>
-    <style>
-
-        /* 1 STEP : box sizing and lobotimized owl */
-
-        :root {
-            box-sizing: border-box;
-        }
-
-        *, ::after, ::before {
-            box-sizing: inherit;
-        }
-
-        body * + * {
-            margin-top: 1.5em;
-        }
-
-        /* 2 STEP : generic styling rules */
-
-        body{
-            background: #bbb;
-            font-family: Arial, sans-serif;
-        }
-
-        header{
-            margin-bottom: 1.5em;
-        }
-
-        header, footer{
-            background-color: #0072b0;
-            padding: 1.5em;
-            color: #fff;
-        }
-
-        main{
-            background: #fff;
-            padding: 0 1.5em 1.5em 1.5em;
-        }
-
-        header, footer, main {
-            border-radius: 5px;
-        }
-
-        article {
-            background-color: #dedede;
-            padding: 1.5em;
-        }
-
-        article h4 {
-            margin: 0;
-        }
-
-        /* 3 STEP : applying float section */
-
-        /* double container pattern */
-        .container{
-            max-width: 1080px;
-            margin: 0 auto;
-        }
-
-        article{
-            float: left;
-            width: 50%;
-        }
-
-        /* 4 STEP : fixing floating section */
-
-        section::after {
-            display: block;
-            content: " ";
-            clear: both;
-        }
-
-        /* 5 STEP : article margins */
-
-        article {
-            margin: 0 1.5em 1.5em 0;
-            width: calc(50% - 1.5em);
-        }
-
-        /*fixes the margins of the edge children*/
-        section {
-            margin-right: -1.5em;
-            margin-bottom: -1.5em;
-        }
-
-        /* 6 STEP : Fixes collapsing margin of section title */
-
-        section::before {
-            display: table;
-            content: " ";
-        }
-
-        /* 7 STEP : grid row clearfix */
-
-        .articles > :nth-child(2n+1) {
-            clear: left;
-        }
-
-        /* 8 STEP : grid element styling */
-
-        .articles img {
-            float: left;
-            margin: 0 1.5em 1.5em 0;
-        }
-
-        .articles .article-body {
-            overflow: auto;
-        }
-
-    </style>
+    <link rel="stylesheet" href="floated_layout.css">
 </head>
 <body>
 <div class="container">
@@ -126,7 +17,7 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -140,7 +31,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -150,7 +45,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -160,7 +59,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -170,7 +73,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -180,7 +87,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -190,7 +101,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
@@ -200,7 +115,11 @@
                 <article>
                     <img src="https://via.placeholder.com/150" alt="img1" class="media-image">
                     <div class="article-body">
-                        <h4>Lorem ipsum</h4>
+                        <h3 class="article--title">Lorem ipsum</h3>
+                        <p>
+                            Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
+                            penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.
+                        </p>
                         <p>
                             Sed mattis vitae nisl quis aliquet. Aliquam posuere et erat eget laoreet. Orci varius natoque
                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi nec varius lorem.

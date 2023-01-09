@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bree+Serif&family=Lobster&display=swap');
+:root{box-sizing: border-box}
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body{
+    background-image: url("wood.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Bree Serif', serif;
+    color: white;
+    margin-top: 0;
+    margin-left: 30px;
+    width: auto;
+    height: auto;
+}
+div #zen-summary{
+    margin-top: 500px;
+    margin-left: 750px;
+    font-size: 30px;
+    width: 450px;
+    background-color: unset;
+    position: absolute;
+    font-family: 'Lobster', cursive;color: rgba(225, 149, 13, 0.86);
+
+
+}
+
+.page-wrapper >#zen-intro header{
+    position: absolute;
+    margin-left: -440px;
+    margin-top: 40px;
+    text-align: center;
+    background-image: linear-gradient(120deg,#012626, #025951, #038C73, #F28705, #8C4303);
+    border-bottom:1px blue;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    transform: rotate(-15deg);
+
+}
+
+#zen-intro header h1{
+    position: absolute;
+    margin-top: 80px;
+    font-size: 60px;
+    border-bottom:solid 3px #02383D;
+    font-family: 'Anton', sans-serif;
+    color: white;
+}
+
+#zen-intro header h2{
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 130px;
+    color: wheat;
+    font-family: 'Anton', sans-serif;
+    font-size: 25px;
+}
+
+
+a,abbr{
+    color: #709b90;
+    text-decoration: unset;
+}
+abbr{
+    all: unset;
+}
+
+
+h3{
+    font-size: 22px;
+    color: #F28705;
+}
+
+.page-wrapper {
+    margin-left: 500px;
+    padding: 50px;
+    max-width: 600px;
+    background: black;
+    margin-top: 100px;
+}
+
+aside .wrapper{
+    position: absolute;
+    box-sizing: content-box;
+    background:linear-gradient(160deg,#012626, #025951, #038C73, #F28705, #8C4303);;
+    color: #bbbbbb;
+    margin-left: -450px;
+    margin-top: -700px;
+    padding: 20px;
+    border:1px solid white;
+}
+
+footer{
+display: inline-block;
+border: 1px solid red;}
