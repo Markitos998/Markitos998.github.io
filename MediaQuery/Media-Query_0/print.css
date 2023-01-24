@@ -1,0 +1,21 @@
+@page  {
+    size: auto;
+    margin: 5mm;
+}
+:root{
+    -webkit-print-color-adjust: exact;
+    /*utilizza esattamente il colore che dico*/
+
+}
+div.title > h1{
+    color: green;
+    background-image: linear-gradient(60deg,#e0971c,#cc6b5a);
+}
+body{
+    margin: 0;
+}
+
+.container{
+    background-color: cornflowerblue;
+
+}

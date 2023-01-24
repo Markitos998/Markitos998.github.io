@@ -1,0 +1,111 @@
+/*ROOT ROLES*/
+:root {
+    box-sizing: border-box;
+    transition: all .5s ease-out; /*APPLICA A TUTTI(INERIT)*/
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+    transition: inherit;
+}
+
+/*END*/
+
+/*GLOBAL/MOBILE(Nexus5-ROLES*/
+body {
+    font-size: 1.2em;
+    font-family: Calibri, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: .9em 0 0 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: .9em 0 0 0;
+}
+
+figure {
+    background-color: black;
+    border-radius: .5em;
+    color: white;
+    padding: .8em;
+    text-align: center;
+    float: left;
+    margin: 0 0 .9em 0;
+}
+
+/*FLEX FIGURE*/
+figure {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    flex: 1;
+    object-fit: cover;
+}
+
+/*END*/
+
+/*EFFECTS*/
+figure:hover {
+    background-color: #096a61;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+/*END*/
+
+.container {
+    margin: 0 .5em;
+}
+
+/*MEDIAQUERY*/
+@media screen and (min-width: 768px) {
+    body {
+        background-color: rgba(0, 0, 255, .2);
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        margin-right: 1.5em;
+        width: calc(50% - 1.5em);
+
+    }
+
+    .container {
+        background-color: white;
+    }
+
+    .kittens::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+    .kittens {
+        margin-right: -1.5em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        background-color: #cc6b5a;
+    }
+
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+        background-color: white;
+        padding: .1em 1.5em;
+    }
+}
+
