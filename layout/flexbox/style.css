@@ -1,27 +1,22 @@
 :root {
     box-sizing: border-box;
 }
-
 *,
 ::before,
 ::after {
     box-sizing: inherit;
 }
-
 body * + * {
     margin-top: 1.5em;
 }
-
-body {
-    background-color: #709b90;
-    font-family: Calibri, sans-serif;
-}
-
 .container {
     max-width: 1080px;
     margin: 0 auto;
 }
-
+body {
+    background-color: #709b90;
+    font-family: Calibri, sans-serif;
+}
 
 /*1 STEP : Apply Flex to site nav */
 
@@ -33,7 +28,7 @@ body {
     border-radius: .2em;
 }
 
-/* reset lobotomized owl on li direct children */
+/* reset lobotomized owl onli direct children */
 .site-nav > li {
     margin-top: 0;
 }
@@ -53,7 +48,7 @@ body {
     margin-left: .5em;
 }
 
-.site-nav > li.nav-right {
+.site-nav > li.nav-right /*potrei usare anche :last-child*/{
     margin-left: auto;
 }
 
@@ -80,11 +75,12 @@ main > * + * {
 /*4 STEP : assign flex layout to tiles */
 
 .column-main {
-    flex: 3;
+    flex-grow: 3;
+
 }
 
 .column-sidebar {
-    flex: 1;
+    flex-shrink:1 ;
 }
 
 /*5 STEP : assign flex layout to sidebar tiles */
