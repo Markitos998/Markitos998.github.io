@@ -1,4 +1,7 @@
-
+@page  {
+    size: auto;
+    margin: 5mm;
+}
 :root {
     box-sizing: border-box;
     -webkit-print-color-adjust: exact;
@@ -64,6 +67,15 @@ nav {
     display: flex;
     background-color: rgba(40, 39, 39, 0.53);
     padding: 1.2em;
+}
+@media screen and(min-width: 320px) and (max-width:700px){
+img{
+    float: top;
+}
+    .column-main{
+        display: flex;
+        flex-flow: column wrap;
+    }
 }
 .column-main > h1{
     color: #F2D5A0;
